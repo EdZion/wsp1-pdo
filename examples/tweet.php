@@ -12,12 +12,12 @@ try {
 
 
 // Make your model available
-include 'models/TestModel.php';
+include 'models/TweetModel.php';
 
 // Create an instance
-$testModel = new TestModel($dbh);
+$tweetModel = new TweetModel($dbh);
 // Get the list of Foos
-$testList = $testModel->getAll('test');
+$tweetList = $tweetModel->getAll('tweet');
 
 // Show the view
-include 'views/test-list.php';
+include 'views/tweet-list.php';

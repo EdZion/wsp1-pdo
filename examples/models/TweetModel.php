@@ -1,5 +1,5 @@
 <?php
-class TestModel
+class TweetModel
 {
     protected $db;
 
@@ -11,4 +11,7 @@ class TestModel
     public function getAll($table) {
         return $this->db->query('SELECT * FROM ' . $table);
     }
+
+
+    // now date("Y-m-d H:i:s")
 }

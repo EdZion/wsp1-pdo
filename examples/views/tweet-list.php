@@ -10,9 +10,10 @@
 <body>
     <div class="container">
         <ul>
-        <?php foreach ($testList as $row): ?>
-            <li><?= $row['id'] ?> - <?= $row['name'] ?></li>
+        <?php foreach ($tweetList as $row): ?>
+            <li><?= $row['id'] ?> - <?= $row['body'] ?> - <?= $row['created_at'] ?> - <?= $row['updated_at'] ?></li>
         <?php endforeach ?>
+
         </ul>    
     </div>
 

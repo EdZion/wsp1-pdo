@@ -15,18 +15,31 @@ Var noga med att få med filen .gitignore i roten så att du inte laddar upp din
 **Databas**
 WSL - mysql -u username -p
 
+    describe table;
     +------------+------------------+------+-----+---------+----------------+
     | Field      | Type             | Null | Key | Default | Extra          |
     +------------+------------------+------+-----+---------+----------------+
     | id         | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
-    | body       | varchar(140)     | YES  |     | NULL    |                |
+    | body       | varchar(140)     | NO  |     | NULL    |                |
     | created_at | timestamp        | YES  |     | NULL    |                |
     | updated_at | timestamp        | YES  |     | NULL    |                |
     +------------+------------------+------+-----+---------+----------------+
 
-    create table test(id int unsigned auto_increment, body varchar(140), primary key (id)) engine=innodb;
+    create table tweet(id int unsigned auto_increment, body varchar(140) not null, primary key (id)) engine=innodb;
 
-    alter table test add created_at timestamp NULL;
+    alter table tweet add created_at timestamp NULL add updated_at timestamp NULL;
+
+För att lägga till data
+
+    insert into tweet (body,created_at,updated_at) values ("Hello world!", now(), now());
+
+För att välja all data
+
+    select * from tweet;
+
+För att välja en specifik rad
+
+    select * from tweet where id = X;
 
 ## Länkar
 

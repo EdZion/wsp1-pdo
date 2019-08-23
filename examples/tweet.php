@@ -11,13 +11,17 @@ try {
 // https://phptherightway.com/#pdo_extension
 
 
-// Make your model available
+// Include model
 include 'models/TweetModel.php';
 
 // Create an instance
 $tweetModel = new TweetModel($dbh);
-// Get the list of Foos
-$tweetList = $tweetModel->getAll('tweet');
+
+// Get a list of all tweets
+$tweetList = $tweetModel->getAll('test');
+
+// test
+//echo "<pre>", print_r($tweetModel->get('test', 1), 1), "</pre>";
 
 // Show the view
 include 'views/tweet-list.php';

@@ -1,1 +1,3 @@
-example/includes/dbinfo.php
+examples/includes/dbinfo.php
+examples/composer.lock
+examples/vendor

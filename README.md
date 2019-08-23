@@ -13,6 +13,7 @@ Var noga med att få med filen .gitignore i roten så att du inte laddar upp din
 
 ## Setup
 **Databas**
+Först med localhost.
 WSL - mysql -u username -p
 
     describe table;
@@ -40,6 +41,9 @@ För att välja all data
 För att välja en specifik rad
 
     select * from tweet where id = X;
+
+Exportera ditt table.
+Nu kan vi testa db servern och importera.
 
 ## Länkar
 

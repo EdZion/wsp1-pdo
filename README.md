@@ -9,6 +9,8 @@ Var noga med att få med filen .gitignore i roten så att du inte laddar upp din
         includes/dbinfo-example.php
         models/TweetModel.php
         views/tweet-list.php
+        tests/TweetTest.php
+        composer.json
         tweet.php
 
 ## Setup
@@ -61,6 +63,13 @@ För att uppdatera ett eller flera värden på en specifik rad
 För att ta bort en rad
 
     delete from tweet where id = 3;
+
+## Tests
+För att köra
+
+    composer install
+    
+    phpunit --bootstrap vendor/autoload.php tests/TweetTest
 
 
 ## Länkar

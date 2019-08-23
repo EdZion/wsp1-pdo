@@ -17,8 +17,12 @@ Först med localhost.
 
 * WSL
     * Kör sudo service mysql restart
-    * mysql -u username -p
-* Sedan på DB server
+    * mysql -u USERNAME -p
+
+Sedan på DB server
+
+* WSL
+    * mysql -h DBSERVER -u USERNAME -p
     * Exportera ditt table.
     * Importera
 
@@ -57,7 +61,6 @@ För att uppdatera ett eller flera värden på en specifik rad
 För att ta bort en rad
 
     delete from tweet where id = 3;
-    
 
 
 ## Länkar
@@ -66,3 +69,4 @@ För att ta bort en rad
 * https://phptherightway.com/#pdo_extension
 * https://www.php.net/manual/en/function.date.php
 * https://www.twitter.com
+* https://www.techonthenet.com/sql/index.php

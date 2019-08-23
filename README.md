@@ -14,14 +14,22 @@ Var noga med att få med filen .gitignore i roten så att du inte laddar upp din
 ## Setup
 **Databas**
 Först med localhost.
-WSL - mysql -u username -p
+
+* WSL
+    * Kör sudo service mysql restart
+    * mysql -u username -p
+* Sedan på DB server
+    * Exportera ditt table.
+    * Importera
+
+### SQL - Structured Query Language
 
     describe table;
     +------------+------------------+------+-----+---------+----------------+
     | Field      | Type             | Null | Key | Default | Extra          |
     +------------+------------------+------+-----+---------+----------------+
     | id         | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
-    | body       | varchar(140)     | NO  |     | NULL    |                |
+    | body       | varchar(140)     | NO   |     | NULL    |                |
     | created_at | timestamp        | YES  |     | NULL    |                |
     | updated_at | timestamp        | YES  |     | NULL    |                |
     +------------+------------------+------+-----+---------+----------------+
@@ -42,8 +50,15 @@ För att välja en specifik rad
 
     select * from tweet where id = X;
 
-Exportera ditt table.
-Nu kan vi testa db servern och importera.
+För att uppdatera ett eller flera värden på en specifik rad
+
+    update tweet set body = "New values!" where id = 3;
+
+För att ta bort en rad
+
+    delete from tweet where id = 3;
+    
+
 
 ## Länkar
 
